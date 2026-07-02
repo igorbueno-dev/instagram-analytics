@@ -40,21 +40,6 @@ A arquitetura é hub-and-spoke: um relatório mestre para a visão completa e se
 
 ---
 
-## Instalação
-
-**No Claude Code (pasta de skills):**
-1. Copie a pasta `instagram-analytics/` para o diretório de skills do seu usuário:
-   `~/.claude/skills/instagram-analytics/`
-2. Reinicie a sessão do Claude. A skill passa a ser reconhecida automaticamente.
-
-**Pelo arquivo `.skill`:**
-1. Abra o arquivo `instagram-analytics.skill` no app do Claude.
-2. Clique em **Save skill** no card que aparece (disponível quando sua organização permite criar skills).
-
-Não há comando de barra a decorar: a skill dispara sozinha quando você descreve uma tarefa de análise de Instagram.
-
----
-
 ## Como usar (chamadas de exemplo)
 
 Basta escrever seu pedido em linguagem natural. Exemplos que disparam a skill:
