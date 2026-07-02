@@ -6,17 +6,6 @@ A arquitetura é hub-and-spoke: um relatório mestre para a visão completa e se
 
 ---
 
-## Como começar (passo a passo)
-
-1. Nesta página, clique no botão verde **`Code`** e depois em **`Download ZIP`**.
-2. No Claude, ative **Configurações, Capacidades, Execução de código e criação de arquivos**.
-3. Vá em **Personalizar, Skills**, clique em **`+`, Criar skill, Fazer upload de uma skill** e selecione o ZIP baixado.
-4. Pronto. Descreva o que quer no chat, por exemplo: *"Analisa meu perfil @seuperfil dos últimos 30 dias e monta o relatório completo."*
-
-> Antes de rodar, confira os [Requisitos](#requisitos): a conta precisa ser **Instagram Business ou Creator** vinculada a uma **Página do Facebook**.
-
----
-
 ## O que ela responde
 
 - Meu perfil está crescendo? O que está travando?
@@ -37,6 +26,17 @@ A arquitetura é hub-and-spoke: um relatório mestre para a visão completa e se
   - **Conector Windsor.ai** conectado ao seu Claude (recomendado, dados automáticos), ou
   - **Dados colados** manualmente (exportados do painel nativo do Instagram ou de uma planilha).
 - Os dados são **orgânicos**. Anúncios (Instagram Ads) não são cobertos.
+
+---
+
+## Como começar (passo a passo)
+
+1. Nesta página, clique no botão verde **`Code`** e depois em **`Download ZIP`**.
+2. No Claude, ative **Configurações, Capacidades, Execução de código e criação de arquivos**.
+3. Vá em **Personalizar, Skills**, clique em **`+`, Criar skill, Fazer upload de uma skill** e selecione o ZIP baixado.
+4. Pronto. Descreva o que quer no chat, por exemplo: *"Analisa meu perfil @seuperfil dos últimos 30 dias e monta o relatório completo."*
+
+> Antes de rodar, confira os [Requisitos](#requisitos): a conta precisa ser **Instagram Business ou Creator** vinculada a uma **Página do Facebook**.
 
 ---
 
@@ -85,6 +85,25 @@ O **relatório mestre** cobre: visão geral do período, crescimento de seguidor
 
 ---
 
+## Estrutura de arquivos
+
+```
+instagram-analytics/
+├── SKILL.md            (regras de roteamento e uso)
+├── README.md           (este arquivo)
+└── references/
+    ├── mestre-windsor.md
+    ├── mestre-manual.md
+    ├── lente-crescimento-diario.md
+    ├── lente-saves-shares.md
+    ├── lente-melhor-horario.md
+    ├── lente-retencao-reels.md
+    ├── lente-formato-converte.md
+    └── lente-descoberta.md
+```
+
+---
+
 ## Relatório visual
 
 O relatório mestre termina gerando um **dashboard interativo** (um artifact HTML) com cards de indicadores, gráficos, navegação por seções, recomendações e roteiros. É a **entrega única e completa** — tudo (inclusive as recomendações) fica no painel, não repetido como um segundo relatório no chat. A única coisa que também aparece no chat é um **bloco de links clicáveis** dos seus top conteúdos: isso é proposital, porque o preview do artifact bloqueia links externos clicados dentro do painel, então os links no chat garantem que você consiga abrir os posts. As lentes respondem em texto por padrão; peça o visual se quiser.
@@ -100,6 +119,14 @@ A skill segue um protocolo em três camadas, pensado para você não se perder:
 3. Se a conexão está boa mas uma métrica específica falta, ela marca "Dado indisponível" e, quando possível, usa uma estimativa (modo proxy) ou indica onde pegar o número no app.
 
 Ela nunca inventa números.
+
+---
+
+## Boas práticas
+
+- Rode o **mestre uma vez por mês** para acompanhar a evolução, e use as **lentes no dia a dia** quando bater uma dúvida específica.
+- Informe o **objetivo de negócio** (crescer seguidores, gerar leads, vender) no pedido: as recomendações ficam mais afiadas.
+- Traga a **legenda ou o link dos posts** nos dados: assim o ranking de top conteúdos identifica exatamente qual publicação foi.
 
 ---
 
@@ -119,30 +146,3 @@ Ela nunca inventa números.
 - **Uma seção veio como "Dado indisponível".** O dado só não chegou na fonte (export incompleto ou você não colou). Cole o número do app nativo e rode de novo.
 - **Algo veio como "Não exposto pela API".** Não é erro: é uma métrica que o Instagram/Meta não fornece oficialmente (duração de Reel, retenção % exata, horários de atividade, alcance por não-seguidores). A skill segue a análise com o que dá e, quando possível, oferece o dado manual do app ou o modo proxy.
 - **A skill não disparou.** Descreva o objetivo com mais clareza (por exemplo, cite "meu Instagram", "meu perfil", ou a métrica que quer analisar), ou peça diretamente o relatório.
-
----
-
-## Boas práticas
-
-- Rode o **mestre uma vez por mês** para acompanhar a evolução, e use as **lentes no dia a dia** quando bater uma dúvida específica.
-- Informe o **objetivo de negócio** (crescer seguidores, gerar leads, vender) no pedido: as recomendações ficam mais afiadas.
-- Traga a **legenda ou o link dos posts** nos dados: assim o ranking de top conteúdos identifica exatamente qual publicação foi.
-
----
-
-## Estrutura de arquivos
-
-```
-instagram-analytics/
-├── SKILL.md            (regras de roteamento e uso)
-├── README.md           (este arquivo)
-└── references/
-    ├── mestre-windsor.md
-    ├── mestre-manual.md
-    ├── lente-crescimento-diario.md
-    ├── lente-saves-shares.md
-    ├── lente-melhor-horario.md
-    ├── lente-retencao-reels.md
-    ├── lente-formato-converte.md
-    └── lente-descoberta.md
-```
