@@ -6,6 +6,37 @@ A arquitetura é hub-and-spoke: um relatório mestre para a visão completa e se
 
 ---
 
+## Como começar (passo a passo para leigos)
+
+Nunca instalou uma skill? Siga estes passos. Leva uns 2 minutos e não precisa saber programar.
+
+**1. Baixe os arquivos (ZIP)**
+- Acesse o repositório: https://github.com/igorbueno-dev/instagram-analytics
+- Clique no botão verde **`Code`** (fica no canto superior direito da lista de arquivos).
+- No menu que abrir, clique em **`Download ZIP`**.
+- O arquivo `instagram-analytics-main.zip` vai para a sua pasta de Downloads.
+
+**2. Descompacte o ZIP**
+- Encontre o arquivo baixado e **extraia/descompacte** (clique com o botão direito, *Extrair tudo*, no Windows; ou duplo-clique, no Mac).
+- Isso cria uma pasta chamada `instagram-analytics` com o conteúdo dentro.
+
+**3. Adicione a skill no Claude Desktop**
+- Abra o app **Claude Desktop** no seu computador.
+- Vá em **Configurações (Settings)**, depois **Capacidades / Skills** (*Capabilities, Skills*).
+- Clique em **Adicionar skill / Upload skill** e selecione a pasta `instagram-analytics` que você descompactou.
+- Pronto: a skill fica salva e disponível.
+
+> Se o seu Claude Desktop pedir um arquivo `.zip` em vez de uma pasta, pode enviar o próprio ZIP baixado, sem descompactar.
+
+**4. Use, sem decorar comandos**
+- Não existe comando de barra a memorizar. Basta **escrever o que você quer em linguagem natural** no chat, por exemplo:
+  > *Analisa meu perfil @seuperfil dos últimos 30 dias e monta o relatório completo.*
+- A skill dispara sozinha e conduz você a partir daí. Veja mais exemplos na seção [Como usar](#como-usar-chamadas-de-exemplo).
+
+> Antes de rodar, confira os [Requisitos](#requisitos): sua conta precisa ser **Instagram Business ou Creator** vinculada a uma **Página do Facebook**.
+
+---
+
 ## O que ela responde
 
 - Meu perfil está crescendo? O que está travando?
