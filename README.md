@@ -31,12 +31,13 @@ A arquitetura é hub-and-spoke: um relatório mestre para a visão completa e se
 
 ## Como começar (passo a passo)
 
-1. Nesta página, clique no botão verde **`Code`** e depois em **`Download ZIP`**.
-2. No Claude, ative **Configurações, Capacidades, Execução de código e criação de arquivos**.
-3. Vá em **Personalizar, Skills**, clique em **`+`, Criar skill, Fazer upload de uma skill** e selecione o ZIP baixado.
-4. Pronto. Descreva o que quer no chat, por exemplo: *"Analisa meu perfil @seuperfil dos últimos 30 dias e monta o relatório completo."*
+1. Nesta página (repositório), clique no botão verde **Code** e depois em **Download ZIP**.
+2. No **Claude Desktop**, abra **Personalizar → Habilidades**.
+3. Clique em **Adicionar → Fazer upload de uma habilidade** e selecione o ZIP que você baixou.
+4. Pronto. Descreva o que quer no chat, por exemplo:
+   *"Analisa meu perfil @seuperfil dos últimos 30 dias e monta o relatório completo."*
 
-> Antes de rodar, confira os [Requisitos](#requisitos): a conta precisa ser **Instagram Business ou Creator** vinculada a uma **Página do Facebook**.
+> **Antes de rodar, confira os Requisitos:** a conta precisa ser **Instagram Business ou Creator** vinculada a uma **Página do Facebook**.
 
 ---
 
